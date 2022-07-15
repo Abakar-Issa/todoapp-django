@@ -1,7 +1,7 @@
-# todoapp-django
+## todoapp-django
 Application todolist avec les opérations CRUD ( Create , Retrieve , Update and Delete ) en utilisant le framework de python django. 
 
-# Pour lancer l'app
+## Pour lancer l'app
 
 * Télécharger le code dans un répertoire 
 * Dans ce même répertoire , créer votre environnement virtuel : python -m venv venv
