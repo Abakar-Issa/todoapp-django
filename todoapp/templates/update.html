@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+Modify a task | 
+{% endblock title %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h1 class="text-center">My todoapp</h1>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <div class="input-group-text"  data-bs-placement="bottom" title="Tâche réalisée">
+                    {{edit_task_form.completed}}
+                </div>
+                {{edit_task_form.title}}
+                <button type="submit" class="btn btn-lg btn-info">modify</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

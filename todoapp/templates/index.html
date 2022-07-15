@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+Mes tâches | 
+{% endblock title %}
+{% block content %}
+
+<div class="card">
+
+    <div class="card-header">
+        <h1 class="text-center">My todoapp</h1>
+    </div>
+
+    <div class = "card-body">
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                {{task_form.title}}
+                <button type = "submit" class="btn btn-primary btn-lg">add</button>
+            </div>
+           
+        </form> 
+
+        <h4 class="bg-secondary text-light py-2 rounded text-center">My tasks </h4>
+    
+     <!-- Liste des tasks -->
+     
+     <ul class="list-group" >
+          {% for task in tasks %}
+          <li class="list-group-item list-group-item-action" >
+             {% if task.completed == True %}
+                 <strike> {{task.title}}</strike>
+ 
+             {% else %}
+ 
+             {{task.title}} 
+ 
+             {% endif %}
+
+             <div class="float-end">
+                <a href="{% url 'update' task.id%}" class="btn btn-sm btn-warning" >modify</a>
+                <a href="{% url 'delete' task.id %}" class="btn btn-sm btn-danger">delete</a>
+             </div>
+            
+         </li>
+          {% endfor %}
+        </ul>
+    </div>
+</div>
+   
+
+{% endblock content %}
