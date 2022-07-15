@@ -5,9 +5,9 @@ Application todolist avec les opérations CRUD ( Create , Retrieve , Update and 
 
 * Télécharger le code dans un répertoire 
 * Dans ce même répertoire , créer et activer votre environnement virtuel : 
-- python -m venv venv
-- venv\Scripts\activate pour windows
-- venv/bin/activate pour Linux 
+python -m venv venv
+venv\Scripts\activate pour windows
+venv/bin/activate pour Linux 
 * Aller dans le répertoire todoapp et lancer : python3 manage.py runserver
 * Ouvrez votre navigateur et taper : www.localhost:8000 si le port 8000 n'est pas occupé 
 
